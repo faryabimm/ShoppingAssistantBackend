@@ -25,14 +25,19 @@
     <p>کد پیگیری: {{ identity }}</p>
 
 
-    <div id="go-button" class="go-button"onclick="go_click_handler()">بزن بریم</div>
+    <div id="go-button" class="go-button" onclick="go_click_handler()">بزن بریم</div>
 </div>
 
 
 <script type="text/javascript" src="{% static "jquery.min.js" %}"></script>
 <script>
     go_click_handler = function () {
-        console.log("salam");
+        $.ajaxSetup({
+            crossDomain: true,
+            xhrFields: {
+                withCredentials: true,
+            },
+        });
         $("#go-button").addClass("disabled");
         $.post(
             "https://shopping-assistant.divar.dev/api/auth/login",
