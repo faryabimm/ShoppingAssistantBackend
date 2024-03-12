@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-hzf4=!pbf(m$4j=nlerc7mguysw@=%ieex794l)3cx3742x4ib
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["api.shopping-assistant.divar.dev", "127.0.0.1", "localhost"]
 
 
 # Application definition
