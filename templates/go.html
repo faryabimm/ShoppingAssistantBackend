@@ -25,31 +25,11 @@
     <p>کد پیگیری: {{ identity }}</p>
 
 
-    <div id="go-button" class="go-button" onclick="go_click_handler()">بزن بریم</div>
+    <form action="https://shopping-assistant.divar.dev/api/auth/login" method="post">
+        <input hidden="hidden" name="email" value="{{ identity_email }}">
+        <input hidden="hidden" name="password" value="{{ identity_email }}">
+        <button id="go-button" class="go-button" type="submit">بزن بریم</button>
+    </form>
 </div>
-
-
-<script type="text/javascript" src="{% static "jquery.min.js" %}"></script>
-<script>
-    go_click_handler = function () {
-        $.ajaxSetup({
-            {#crossDomain: true,#}
-            xhrFields: {
-                withCredentials: true,
-            },
-        });
-        $("#go-button").addClass("disabled");
-        $.post(
-            "https://shopping-assistant.divar.dev/api/auth/login",
-            {
-                email: "faryabimm@gmail.com",
-                password: "QWEasd1230-="
-            },
-            () => {
-                window.location.href = "https://shopping-assistant.divar.dev/";
-            },
-        );
-    };
-</script>
 </body>
 </html>

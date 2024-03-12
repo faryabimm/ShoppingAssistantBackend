@@ -25,7 +25,7 @@ class GoView(TemplateView):
         identity_mail = f"{identity}@divar.dev"
         self.extra_context = {
             **(self.extra_context or {}),
-            "identity_mail": identity_mail,
+            "identity_email": identity_mail,
             "identity": identity,
         }
         return super().get(self, request, *args, **kwargs)

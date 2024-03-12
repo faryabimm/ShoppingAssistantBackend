@@ -8,7 +8,7 @@ h3 {
     text-align: center;
 }
 
-.main-container{
+.main-container {
     margin: auto;
     width: 95%;
     height: 90%;
@@ -22,8 +22,8 @@ h3 {
 
 .divar-logo {
     height: auto;
-    padding-left: calc((100% - 100px)/2);
-    padding-right: calc((100% - 100px)/2);
+    padding-left: calc((100% - 100px) / 2);
+    padding-right: calc((100% - 100px) / 2);
     width: 100px;
     margin: fill;
 }
@@ -38,6 +38,9 @@ h3 {
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
+    font-family: IRANSans, sans-serif;
+    border: none;
+    width: 100%;
 }
 
 .go-button.disabled {
